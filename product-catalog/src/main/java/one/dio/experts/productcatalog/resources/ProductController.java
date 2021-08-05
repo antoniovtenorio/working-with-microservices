@@ -11,19 +11,16 @@ import java.util.Optional;
 @RequestMapping("/product")
 public class ProductController {
 
-    private final ProductRepository productRepository;
-
     @Autowired
-    public ProductController(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
+    private ProductRepository productRepository;
 
     @PostMapping
     Product create(@RequestBody Product product) {
         return productRepository.save(product);
     }
+
     @GetMapping("/{id}")
-    Optional<Product> findById(@PathVariable Integer id) {
+    Optional<Product> findById(@PathVariable Long id) {
         return productRepository.findById(id);
     }
 }

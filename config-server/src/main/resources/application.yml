@@ -4,6 +4,9 @@ server:
 spring:
   cloud:
     config:
+
       server:
         git:
-          uri: https://github.com/antoniovtenorio/working-with-microservices.git
+          uri: https://github.com/antoniovtenorio/working-with-microservices-configs.git
+
+

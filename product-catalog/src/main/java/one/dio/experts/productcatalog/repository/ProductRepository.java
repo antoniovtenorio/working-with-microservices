@@ -1,7 +1,8 @@
 package one.dio.experts.productcatalog.repository;
 
 import one.dio.experts.productcatalog.model.Product;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
-public interface ProductRepository extends CrudRepository<Product, Long> {
+
+public interface ProductRepository extends ElasticsearchRepository<Product, Integer> {
 }

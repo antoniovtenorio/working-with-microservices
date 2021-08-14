@@ -12,7 +12,7 @@ import java.util.Optional;
 public class ProductController {
 
     @Autowired
-    private ProductRepository productRepository;
+    ProductRepository productRepository;
 
     @PostMapping
     Product create(@RequestBody Product product) {
@@ -20,7 +20,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    Optional<Product> findById(@PathVariable Long id) {
+    Optional<Product> findById(@PathVariable Integer id) {
         return productRepository.findById(id);
     }
 }
